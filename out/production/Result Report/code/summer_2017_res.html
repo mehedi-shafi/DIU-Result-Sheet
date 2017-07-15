@@ -1,0 +1,610 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<link rel="shortcut icon" href="/resources/icon/favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet"	href="/resources/css/bootstrap.min.css"	type="text/css" />
+<link rel="stylesheet"	href="/resources/css/bootstrap-theme.min.css" />
+<link rel="stylesheet"	href="/resources/css/jquery.ambiance.css" />
+<link rel="stylesheet"	href="/resources/css/style.css" />
+<link rel="stylesheet"	href="/resources/css/angular-ui-notification.min.css" />
+
+<script src="/resources/js/jquery-1.11.1.js"></script>
+<script src="/resources/js/bootstrap.min.js"></script>
+<script src="/resources/js/bootbox.min.js"></script>
+<script src="/resources/js/jquery.ambiance.js"></script>
+<script src="/resources/js/jquery-ui.min.js"></script>
+
+<script src="/resources/js/angular.min.js"></script>
+<script src="/resources/js/angular-ui-notification.min.js"></script>
+
+
+<title>student portal</title>
+
+</head>
+
+<body>
+
+	
+
+	<div class="container">
+<div class="row">
+		<!-- Static navbar -->
+		<div class="navbar navbar-inverse" role="navigation">
+			<div class="">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+
+						
+						<a class="navbar-brand" href="/">Student
+						Portal</a>
+							<li class=""><a
+								href="/login">Login</a></li>
+								<li class="active"><a
+								href="/result">Result</a></li>
+								
+
+							
+
+
+
+
+								
+								
+								<li class=""><a
+								href="/?app=certificateVerify">Certificate Verify</a></li>
+								
+								<li><a href="http://internship.daffodilvarsity.edu.bd" target="_blank" />Internship</a></li>
+
+								
+						
+
+
+						
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+			<!--/.container-fluid -->
+		</div>
+	</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+			.rowStyle{
+				margin-bottom: 5px;
+				margin-top: 5px;
+			}
+			#GradeTable .table{
+			  font-size: 10px;
+			}
+			.table > tbody >tr > td{
+			  padding: 2px;
+			}
+			.panel-body{
+			  padding: 0px
+			}
+</style>
+<div class="container">
+		<div class="row">
+			<div class="col-md-3 rowStyle" >
+				<img src="/resources/icon/diulogo_full.png" class="img-responsive" alt="Daffodil"/>
+			</div>
+			
+			
+			<form action="result" method="POST" >
+			
+			<div class="col-md-3 rowStyle">
+				<div class="input-group">
+				  <span class="input-group-addon" id="basic-addon1">Student ID :</span>
+				  <input type="text" class="form-control" placeholder="Student Id" aria-describedby="basic-addon1" name="student_id">
+				</div>
+			</div>
+			<div class="col-md-4 rowStyle">
+				<div class="input-group">
+				  <span class="input-group-addon" id="basic-addon1">Select Semester :</span>
+					<select class="form-control" aria-describedby="basic-addon1" name="semester_id">
+							
+					
+						<option value="171" >
+							Spring-2017
+						</option>
+					
+						<option value="163" >
+							Fall-2016
+						</option>
+					
+						<option value="162" >
+							Summer-2016
+						</option>
+					
+						<option value="161" >
+							Spring-2016
+						</option>
+					
+						<option value="153" >
+							Fall-2015
+						</option>
+					
+						<option value="152" >
+							Summer-2015
+						</option>
+					
+						<option value="151" >
+							Spring-2015
+						</option>
+					
+						<option value="143" >
+							Fall-2014
+						</option>
+					
+						<option value="142" >
+							Summer-2014
+						</option>
+					
+						<option value="141" >
+							Spring-2014
+						</option>
+					
+						<option value="133" >
+							Fall-2013
+						</option>
+					
+						<option value="132" >
+							Summer-2013
+						</option>
+					
+						<option value="131" >
+							Spring-2013
+						</option>
+					
+						<option value="123" >
+							Fall-2012
+						</option>
+					
+						<option value="122" >
+							Summer-2012
+						</option>
+					
+						<option value="121" >
+							Spring-2012
+						</option>
+					
+						<option value="113" >
+							Fall-2011
+						</option>
+					
+						<option value="112" >
+							Summer-2011
+						</option>
+					
+						<option value="111" >
+							Spring-2011
+						</option>
+					
+						<option value="103" >
+							Fall-2010
+						</option>
+					
+						<option value="102" >
+							Summer-2010
+						</option>
+					
+						<option value="101" >
+							Spring-2010
+						</option>
+					
+						<option value="093" >
+							Fall-2009
+						</option>
+					
+						<option value="092" >
+							Summer-2009
+						</option>
+					
+						<option value="091" >
+							Spring-2009
+						</option>
+					
+						<option value="083" >
+							Fall-2008
+						</option>
+					
+							
+					</select>
+				</div>
+			</div>
+			<div class="col-md-2 rowStyle">
+				<div class="btn-group btn-group-md" role="group" aria-label="Large button group">
+				  <button type="submit" class="btn btn-success">Show Result</button>
+				  <button type="submit" class="btn btn-warning">Print</button>
+				</div>
+			</div>
+		
+			</form>
+		</div>
+		<div class="row">
+			<div id="studentInfo" class="col-md-8">
+				<fieldset>
+					<legend>Student Info</legend>
+						<div class="row">
+						
+						
+										
+						
+						
+						
+
+							<div class="col-md-3 col-sm-3"><label>Program :</label></div><div class="col-md-9 col-sm-9"><span>B.Sc. in Computer Science &amp; Engineering</span></div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-sm-3"><label>Name of Student :</label></div><div class="col-md-9 col-sm-9"><span>Mehedi Imam Shafi</span></div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-sm-3"><label>Student ID :</label></div><div class="col-md-9 col-sm-9"><span>151-15-5248</span></div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-sm-3"><label>Enrollment :</label></div><div class="col-md-9 col-sm-9"><span>Spring 2015</span></div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 col-sm-3"><label>Batch :</label></div><div class="col-md-9 col-sm-9"><span>40</span></div>
+						</div>
+						<!-- <div class="row">
+							<div class="col-md-3 col-sm-3"><label>Major :</label></div><div class="col-md-9 col-sm-9"><span></span></div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 col-sm-3"><label>Date of Issue :</label></div><div class="col-md-9 col-sm-9"><span></span></div>
+						</div> -->
+						
+				</fieldset>
+			</div>
+			
+			<div id="GradeTable" class="col-md-4 visible-md visible-lg">
+				<div class="panel panel-info">
+				  <div class="panel-heading">
+					<h3 class="panel-title text-center">UGC Uniform Grading System</h3>
+				  </div>
+				  <div class="panel-body">
+					<table class="table table-striped">
+                      <tbody><tr>
+                        <td><span>Marks</span></td>
+                        <td><span>Grade</span></td>
+                        <td nowrap="nowrap"><span class="style14">Grade Point </span></td>
+                        <td ><span>Remarks</span></td>
+                      </tr>
+                      <tr>
+                        <td><div><span>80-100%</span></div></td>
+                        <td><span>A +</span></td>
+                        <td><span>4.00</span></td>
+                        <td nowrap="nowrap"><span>Outstanding</span></td>
+                      </tr>
+                      <tr>
+                        <td><div><span>75-79%</span></div></td>
+                        <td><span>A</span></td>
+                        <td><span>3.75</span></td>
+                        <td nowrap="nowrap"><span class="style6">Excellent</span></td>
+                      </tr>
+                      <tr>
+                        <td><div><span>70-74%</span></div></td>
+                        <td><span>A-</span></td>
+                        <td><span>3.50</span></td>
+                        <td nowrap="nowrap"><span>Very Good</span></td>
+                      </tr>
+                      <tr>
+                        <td><div><span>65-69%</span></div></td>
+                        <td><span>B+</span></td>
+                        <td><span>3.25</span></td>
+                        <td nowrap="nowrap"><span>Good</span></td>
+                      </tr>
+                      <tr>
+                        <td><div><span>60-64%</span></div></td>
+                        <td><span>B</span></td>
+                        <td><span>3.00</span></td>
+                        <td nowrap="nowrap"><span>Satisfactory</span></td>
+                      </tr>
+                      <tr>
+                        <td><div><span>55-59%</span></div></td>
+                        <td><span>B-</span></td>
+                        <td><span>2.75</span></td>
+                        <td nowrap="nowrap"><span>Above Average</span></td>
+                      </tr>
+                      <tr>
+                        <td><div><span>50-54%</span></div></td>
+                        <td><span>C+</span></td>
+                        <td><span>2.50</span></td>
+                        <td nowrap="nowrap"><span>Average</span></td>
+                      </tr>
+                      <tr>
+                        <td><div><span>45-49%</span></div></td>
+                        <td><span>C</span></td>
+                        <td><span>2.25</span></td>
+                        <td nowrap="nowrap"><span>Below Average</span></td>
+                      </tr>
+                      <tr>
+                        <td><div><span>40-44%</span></div></td>
+                        <td><span>D</span></td>
+                        <td><span>2.00</span></td>
+                        <td nowrap="nowrap"><span>Pass</span></td>
+                      </tr>
+                      <tr>
+                        <td><div><span>00-39%</span></div></td>
+                        <td><span>F</span></td>
+                        <td><span>0.00</span></td>
+                        <td nowrap="nowrap"><span>Fail</span></td>
+                      </tr>
+                      <tr>
+                        <td colspan="4"><div align="center"><span class="style8">Effective from Summer Semester 2007</span></div></td>
+                      </tr>
+                  </tbody>
+			  </table>
+				  </div>
+				</div>
+			
+				
+			</div><!-- end Grade Table -->
+		</div>
+		
+		<div class="panel panel-success">
+			  <div class="panel-heading">
+				<h2 class="panel-title text-center" style="font-size:20px">Academic Result of:
+				 
+				Spring 2017
+				
+				</h2>
+				
+			  </div>
+			  <div class="panel-body">
+				<div class="row">
+					<div class="col-md-12">
+					<table class="table table-striped">
+				<thead>
+					<th class="visible-md visible-lg visible-sm">Course Code</th>
+					<th>Course Title</th>
+					<th class="visible-md visible-lg visible-sm">Credit</th>
+					<th>Grade</th>
+					<th>Grade Point</th>
+			    </thead>
+				<tbody>
+				
+				
+					
+										
+						
+						
+						
+						
+						<tr>
+						<td class="visible-md visible-lg visible-sm">CSE313</td>
+						<td>Computer Networks</td>
+						<td class="visible-md visible-lg visible-sm">3.0</td>
+						
+						
+					
+						
+						
+						 
+						
+						
+							<td>A+</td>
+							<td>4.00</td>
+						
+																
+						
+				
+				
+						
+											
+					</tr>
+										
+						
+						
+						
+						
+						<tr>
+						<td class="visible-md visible-lg visible-sm">CSE311</td>
+						<td>Database Management System</td>
+						<td class="visible-md visible-lg visible-sm">3.0</td>
+						
+						
+					
+						
+						
+						 
+						
+						
+							<td>A+</td>
+							<td>4.00</td>
+						
+																
+						
+				
+				
+						
+											
+					</tr>
+										
+						
+						
+						
+						
+						<tr>
+						<td class="visible-md visible-lg visible-sm">CSE314</td>
+						<td>Computer Networks Lab</td>
+						<td class="visible-md visible-lg visible-sm">1.0</td>
+						
+						
+					
+						
+						
+						 
+						
+						
+							<td>A+</td>
+							<td>4.00</td>
+						
+																
+						
+				
+				
+						
+											
+					</tr>
+										
+						
+						
+						
+						
+						<tr>
+						<td class="visible-md visible-lg visible-sm">CSE312</td>
+						<td>Database Management System Lab</td>
+						<td class="visible-md visible-lg visible-sm">1.0</td>
+						
+						
+					
+						
+						
+						 
+						
+						
+							<td>A+</td>
+							<td>4.00</td>
+						
+																
+						
+				
+				
+						
+											
+					</tr>
+										
+						
+						
+						
+						
+						<tr>
+						<td class="visible-md visible-lg visible-sm">GED 321</td>
+						<td>Art of Living</td>
+						<td class="visible-md visible-lg visible-sm">3.0</td>
+						
+						
+					
+						
+						
+						 
+						
+						
+							<td>A</td>
+							<td>3.75</td>
+						
+																
+						
+				
+				
+						
+											
+					</tr>
+					
+					
+					
+				</tbody>
+		    </table>
+		    		    
+				  
+		    
+					</div>
+				</div>
+			  </div>
+			</div>
+		
+		
+		
+		<div class="row">
+			<div class="col-md-4"><label>Total Credit Requirement : 
+			 0 
+						 
+			 </label></div>
+			
+			<div class="col-md-6"><label>Total Credits Taken: 11.0</label></div>
+			
+			
+			
+			
+		
+			
+					<div class="col-md-2"><label>SGPA : 3.93</label></div>
+			
+									
+			
+			
+			
+			
+		</div>
+		<br>
+		<h4>
+			N.B.: If you see Teaching Evaluation Pending in any course. Please complete <a href="http://studentportal.diu.edu.bd/teacherEval" style="color:red">Teaching Evaluation.</a>
+		</h4>
+	</div><!-- end container -->
+
+
+
+
+		<br> <br>
+		<center>
+			
+
+&copy; DIU Student Portal
+		</center>
+
+	</div>
+
+</body>
+</html>

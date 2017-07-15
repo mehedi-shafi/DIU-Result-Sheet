@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Out.LoadingGUI">
+  <grid id="27dc6" binding="panelMain" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <foreground color="-16729172"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="fbdf" class="javax.swing.JProgressBar" binding="progressBar">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <background color="-1509639"/>
+          <font name="Ubuntu Light" size="16" style="2"/>
+          <foreground color="-16729172"/>
+          <indeterminate value="false"/>
+          <stringPainted value="true"/>
+          <value value="0"/>
+        </properties>
+      </component>
+      <component id="7ac04" class="javax.swing.JLabel" binding="statusLabel">
+        <constraints border-constraint="South"/>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
