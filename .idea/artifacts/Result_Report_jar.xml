@@ -3,20 +3,21 @@
     <output-path>$PROJECT_DIR$/out/artifacts/Result_Report_jar</output-path>
     <root id="archive" name="Result Report.jar">
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/out/META-INF/MANIFEST.MF" />
       </element>
       <element id="module-output" name="Result Report" />
-      <element id="extracted-dir" path="$USER_HOME$/Desktop/httpcomponents-client-4.5.3/lib/commons-logging-1.2.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Desktop/httpcomponents-client-4.5.3/lib/jna-4.1.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Desktop/httpcomponents-client-4.5.3/lib/httpclient-4.5.3.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Desktop/httpcomponents-client-4.5.3/lib/httpclient-cache-4.5.3.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Downloads/jsoup-1.10.3.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Desktop/httpcomponents-client-4.5.3/lib/commons-codec-1.9.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Desktop/httpcomponents-client-4.5.3/lib/httpcore-4.4.6.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Desktop/httpcomponents-client-4.5.3/lib/httpclient-win-4.5.3.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Desktop/httpcomponents-client-4.5.3/lib/httpmime-4.5.3.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Desktop/httpcomponents-client-4.5.3/lib/jna-platform-4.1.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Desktop/httpcomponents-client-4.5.3/lib/fluent-hc-4.5.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/httpmime-4.5.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/gson-2.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jna-4.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/commons-codec-1.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/httpcore-4.4.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/fluent-hc-4.5.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/httpclient-4.5.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/commons-logging-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jna-platform-4.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/httpclient-win-4.5.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/httpclient-cache-4.5.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/jsoup-1.10.3.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

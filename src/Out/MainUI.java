@@ -97,7 +97,7 @@ public class MainUI {
                     public void run() {
                         try {
                             new LoadingGUI(ID, from_semester_id, to_semester_id);
-                            frame.dispose();
+
                         }catch (Exception E){
                             E.printStackTrace();
                         }

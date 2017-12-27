@@ -57,7 +57,7 @@ public class LoadingGUI {
             htmlGrabber.setSemester_id(String.valueOf(i));
             Scraper scraper = new Scraper(htmlGrabber.sendPost());
             if (i == Integer.parseInt(semester_from)){
-                student = scraper.getStudentData();
+                student = scraper.getStudentDataJson(htmlGrabber.sendGet("http://software.diu.edu.bd/studentportalApi/result/studentInfo?studentId="+student_id));
             }
             double percentage = (double) (currentCnt * 100) / totalSemester;
 

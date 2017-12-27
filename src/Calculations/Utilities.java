@@ -4,7 +4,7 @@ package Calculations;
  * Created by shafi on 7/15/2017.
  */
 public class Utilities {
-    public static  String RESULT_URL= "http://studentportal.diu.edu.bd/result";
+    public static  String RESULT_URL= "http://vus.daffodilvarsity.edu.bd/?app=result";
 
     public static String semester_id_generation (int year, int semester){
 

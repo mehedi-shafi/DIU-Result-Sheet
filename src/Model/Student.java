@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.Map;
+
 /**
  * Created by shafi on 7/14/2017.
  */
@@ -10,6 +12,18 @@ public class Student {
     private String program;
     private String batch;
     private String enrollment;
+
+    public Student(){
+
+    }
+
+    public Student(Map<String, String> data){
+        this.name = data.get("studentName");
+        this.id = data.get("studentId");
+        this.program = data.get("programName");
+        this.batch = data.get("batchNo");
+        this.enrollment = data.get("semesterName");
+    }
 
     public String getName() {
         return name;

@@ -1,5 +1,6 @@
 package code;
 
+import org.apache.http.impl.client.HttpClientBuilder;
 import sun.net.www.http.HttpClient;
 
 import org.apache.http.HttpResponse;
@@ -39,13 +40,30 @@ public class HTTPHANDLE {
         this.semester_id = semester_id;
     }
 
+    public String sendGet(String url) throws  Exception{
+        org.apache.http.client.HttpClient client = HttpClientBuilder.create().build();
+        HttpGet request = new HttpGet(url);
+
+        HttpResponse response = client.execute(request);
+
+        BufferedReader rd = new BufferedReader(
+                new InputStreamReader(response.getEntity().getContent()));
+
+        StringBuffer result = new StringBuffer();
+        String line = "";
+        while ((line = rd.readLine()) != null) {
+            result.append(line);
+        }
+        return result.toString();
+    }
+
     public String sendPost() throws  Exception{
         org.apache.http.client.HttpClient client = new DefaultHttpClient();
         HttpPost post = new HttpPost(url);
 
         List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
-        urlParameters.add(new BasicNameValuePair("student_id", student_id));
-        urlParameters.add(new BasicNameValuePair("semester_id", semester_id));
+        urlParameters.add(new BasicNameValuePair("STUDENT_ID", student_id));
+        urlParameters.add(new BasicNameValuePair("SELESTER_ID", semester_id));
 
         post.setEntity(new UrlEncodedFormEntity(urlParameters));
 
@@ -68,6 +86,8 @@ public class HTTPHANDLE {
         System.out.println ("Gotten datasize = " + resultString.length());
         return result.toString();
     }
+
+
 
     public String getStudent_id() {
         return student_id;
