@@ -1,7 +1,6 @@
 package Out;
 
 import Calculations.Utilities;
-import oracle.jrockit.jfr.JFR;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -18,7 +17,7 @@ public class MainUI {
 
     private String[] semesters = new String[] {"Spring", "Summer", "Fall"};
     private JPanel mainPanel;
-    private JTextArea idText;
+    private JTextField idText;
     private JButton goButton;
     private JLabel idLabel;
     private JComboBox fromYearDrop;
@@ -30,7 +29,7 @@ public class MainUI {
         JFrame frame = new JFrame("Result");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setContentPane(mainPanel);
-        frame.setSize(480, 200);
+        frame.setSize(500, 200);
         frame.setResizable(false);
         frame.setVisible(true);
 
@@ -115,4 +114,5 @@ public class MainUI {
                 }
             });
     }
+
 }

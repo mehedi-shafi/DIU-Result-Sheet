@@ -24,7 +24,7 @@ public class LoadingGUI {
         frame.setSize(240, 100);
         frame.setResizable(false);
         frame.setVisible(true);
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
 
         this.student_id = student_id;

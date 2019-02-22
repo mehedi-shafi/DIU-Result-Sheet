@@ -68,7 +68,7 @@ public class HTTPHANDLE {
         post.setEntity(new UrlEncodedFormEntity(urlParameters));
 
         HttpResponse response = client.execute(post);
-        System.out.println("\nSending 'POST' request to URL : " + url);
+        System.out.println("Sending 'POST' request to URL : " + url);
         System.out.println("Post parameters : " + post.getEntity());
         System.out.println("Response Code : " +
                 response.getStatusLine().getStatusCode());
@@ -84,6 +84,7 @@ public class HTTPHANDLE {
 
         String resultString = result.toString();
         System.out.println ("Gotten datasize = " + resultString.length());
+        System.out.println();
         return result.toString();
     }
 

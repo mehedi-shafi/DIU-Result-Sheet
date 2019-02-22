@@ -1,9 +1,9 @@
 package Out;
 
 import Calculations.CGPA_calc;
+import Calculations.Utilities;
 import Model.Student;
 import Model.Subject;
-import oracle.jrockit.jfr.JFR;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -38,8 +38,12 @@ public class ReportGUI {
 
     public ReportGUI(Student student, ArrayList<Subject> Result){
 
+        System.out.println("Total courses: " + Result.size());
+        Result = Utilities.getUnqueResult(Result);
+        System.out.println("Total courses: " + Result.size());
+
         JFrame frame = new JFrame("Report Card.");
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setSize(720, 620);
         frame.setVisible(true);
         frame.setResizable(true);

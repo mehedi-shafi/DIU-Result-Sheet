@@ -33,7 +33,7 @@ public class Scraper {
     }
 
     public Student getStudentDataJson(String data) throws  Exception{
-        System.out.println(data);
+//        System.out.println(data);
         Gson json = new GsonBuilder().create();
         Type type = new TypeToken<Map<String, String>>(){}.getType();
         Map<String, String> dataMap = json.fromJson(data, type);
@@ -61,16 +61,16 @@ public class Scraper {
         ArrayList<Subject> result = new ArrayList<>();
         org.jsoup.nodes.Document doc = Jsoup.parse(htmlData);
 
-        System.out.println();
-        System.out.println("   +++++++++++++++++++++++++++      ");
+//        System.out.println();
+//        System.out.println("   +++++++++++++++++++++++++++      ");
         Element dataTable = doc.body().select("table").get(9);
 
-        System.out.println(dataTable.toString());
+//        System.out.println(dataTable.toString());
 
-        System.out.println(dataTable.toString());
+//        System.out.println(dataTable.toString());
         Elements allRows = dataTable.select("tr");
 
-        System.out.println(allRows.text());
+//        System.out.println(allRows.text());
         Element firstRow = allRows.get(0);
         Elements columnNames = firstRow.select("td");
 
@@ -87,7 +87,7 @@ public class Scraper {
         for (int i = 1; i < allRows.size(); i++){
             Element tempRow = allRows.get(i);
             Elements tempData = tempRow.select("td");
-            System.out.println(tempData.text());
+//            System.out.println(tempData.text());
             Subject sub = new Subject();
             sub.setCourseCode(tempData.get(0).text());
             sub.setCourseName(tempData.get(1).text());
